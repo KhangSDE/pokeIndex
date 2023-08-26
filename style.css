@@ -50,6 +50,21 @@ section {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
 }
+@media (max-width:1500px) {
+    section {
+        grid-template-columns: repeat(4,1fr);
+    }
+}
+@media (max-width:1100px) {
+    section {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media (max-width:500px) {
+    section {
+        grid-template-columns: repeat(1,1fr);
+    }
+}
 section.team {
     grid-template-columns: repeat(3, 1fr);
     background-color: rgba(255, 255, 255, 0);
@@ -103,6 +118,27 @@ section .pokemon-container {
     transition: 0.4s;
     
 }
+@media (max-width:1500px) {
+    section .pokemon-container {
+        width: 20vw;
+        height: 30vw;
+    }
+}
+@media (max-width:1100px) {
+    section .pokemon-container {
+        width: 40vw;
+        height: 30vw;
+    }
+}
+@media (max-width:500px) {
+    section .pokemon-container {
+        width: 80vw;
+        height: 50vw;
+    }
+}
+
+
+
 section .pokemon-container:hover{
     transform: translateY(-10px);
 }
@@ -188,7 +224,12 @@ section .pokemon-container .pokemon-information {
     grid-template-columns: repeat(5,1fr);
     visibility: hidden;
 }
-
+@media (max-width:1500px) {
+    .pokemon-gen {
+        width: 80vw;
+        height: 60vw;
+    }
+}
 .active {
     visibility: visible;
 }
@@ -306,3 +347,4 @@ section .pokemon-container .pokemon-information {
     position: absolute;
     right: 10px;
 }
+
