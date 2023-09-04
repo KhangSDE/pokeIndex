@@ -65,15 +65,29 @@ section {
         grid-template-columns: repeat(1,1fr);
     }
 }
+
 section.team {
     grid-template-columns: repeat(3, 1fr);
-    background-color: rgba(255, 255, 255, 0);
+    background-color: rgba(255, 40, 40, 0);
     width: 55vw;
     height: 45vw;
     overflow-x: hidden ;
     position: absolute;
     margin-right: 50px;
     
+}
+@media (max-width:390px) {
+    section.team {
+        grid-template-columns: repeat(1,1fr);
+        top: 166vw;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 80vw;
+        border-radius: 1vw;
+        background-color: rgba(0, 255, 255, 0);
+        
+    }
 }
 .pokemon-choose {
     background-color: rgba(255, 255, 255, 0.178);
@@ -91,6 +105,17 @@ section.team {
     visibility: hidden;
     
 }
+
+@media (max-width:390px) {
+    .pokemon-choose {
+        width: 80vw;
+        height: 120vw;
+        left: 0;
+        right: 0;
+        margin: auto;
+        top: 40vw;
+    }
+}
 .pokemon-choose .pokemon-choose-container {
     background-color: rgba(255, 255, 255, 0.452);
     width: 10vw;
@@ -103,6 +128,12 @@ section.team {
     align-items: center;
 
     
+}
+@media (max-width:390px) {
+    .pokemon-choose .pokemon-choose-container  {
+        width: 35vw;
+        height: 30vw;
+    }
 }
 section .pokemon-container {
     background-color: rgb(42,38,60); 
@@ -154,20 +185,31 @@ section .pokemon-container img {
     position: absolute;
     top: 20px;
 }
-section .pokemon-container p {
+/* section .pokemon-container p {
     position: absolute;
     bottom: 20px;
     letter-spacing: 5px;
     text-transform: uppercase;
-}
+} */
 section .pokemon-container .pokemon-information {
     position: absolute;
     color: white;
     left: 40px;
-    bottom: 120px;
+    bottom: 5vw;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 10vw;
     background-color: rgb(236, 115, 139);
     padding: 0px 20px;
     border-radius: 5px;
+}
+
+@media(max-width: 390px) {
+    section .pokemon-container .pokemon-information {
+        width: 40vw;
+        bottom: 13vw;
+    }
 }
 
 .input-search {
@@ -197,9 +239,26 @@ section .pokemon-container .pokemon-information {
     top: 80px;
     position: absolute; */
 }
+
+@media (max-width: 390px) {
+    .input-search input{
+        height: 10vw;
+        left: 6vw;
+        position: relative;
+        top: 10vw;
+    }
+}
 .input-search img {
     width: 2rem;
     transition: 0.4s;
+}
+@media (max-width: 390px) {
+    .input-search img{
+        
+        left: 3vw;
+        position: relative;
+        top: 10vw;
+    }
 }
 .input-search img:hover {
     transform: translateY(-10px);
@@ -230,6 +289,15 @@ section .pokemon-container .pokemon-information {
         height: 60vw;
     }
 }
+@media (max-width:390px) {
+    .pokemon-gen {
+        width: 80vw;
+        height: 180vw;
+        grid-template-columns: repeat(1,1fr);
+        overflow-x: auto;
+        gap: 20px;
+    }
+}
 .active {
     visibility: visible;
 }
@@ -244,6 +312,19 @@ section .pokemon-container .pokemon-information {
     
     
 }
+@media (max-width:390px) {
+    .pokemon-gen .pokemon-gen-image {
+        width: 50vw;
+        height: 50vw;
+        
+    }
+}
+
+.pokemon-name {
+    text-transform: uppercase;
+    position: absolute;
+    top: 12vw;
+}
 .pokemon-gen .pokemon-gen-image:hover {
     transform: translateY(-10px);
 }
@@ -257,6 +338,13 @@ section .pokemon-container .pokemon-information {
     border-radius: 15px;
     top: 10px;
 }
+@media (max-width:390px) {
+    .pokemon-gen .pokemon-gen-image img {
+        width: 46vw;
+        height: 46vw;
+        
+    }
+}
 .pokemon-gen .pokemon-gen-image p {
     position: absolute;
     margin: auto;
@@ -265,6 +353,11 @@ section .pokemon-container .pokemon-information {
     bottom: 20px;
     font-size: 3rem;
     color: white;
+}
+@media (max-width:390px) {
+    .pokemon-gen-image p {
+        display: none;
+    }
 }
 .pokemon-gen h1{
     position: absolute;
@@ -277,7 +370,11 @@ section .pokemon-container .pokemon-information {
     color: white;
     top: 100px;
 }
-
+@media (max-width:390px) {
+    .pokemon-gen h1{
+        display: none;
+    }
+}
 .pokemon-team {
     background-color: rgb(236,115,139);
     width: 5vw;
@@ -291,6 +388,16 @@ section .pokemon-container .pokemon-information {
     align-items: center;
     color: white;
     transition: 0.4s;
+}
+
+@media (max-width: 390px) {
+    .pokemon-team {
+        top: 27vw;
+        left: 10vw;
+        width: 20vw;
+        height: 10vw;
+        font-size: 1vw;
+    }
 }
 
 .pokemon-team:hover{
@@ -325,6 +432,7 @@ section .pokemon-container .pokemon-information {
     width: 10vw;
 }
 
+
 .pokemon-choose-container p {
     font-size: 0.2em;
     position: absolute;
@@ -343,8 +451,11 @@ section .pokemon-container .pokemon-information {
 
 }
 
+
+
 .pokemon-choose-container .id-number {
     position: absolute;
     right: 10px;
 }
+
 
